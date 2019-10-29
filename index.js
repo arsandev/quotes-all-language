@@ -4,6 +4,9 @@ const router = express.Router()
 import axios from 'axios'
 import path from 'path'
 import translate from '@k3rn31p4nic/google-translate-api'
+import cors from 'cors'
+
+app.use(cors())
 
 app.get('/', (req,res)=>{
   res.sendFile(path.join(__dirname,'index.html'))
